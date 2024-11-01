@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management App Reviews</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    .reviewer-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .reviewer-section {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .reviewer-section img {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 200px;
+      margin-right: 20px;
+      scroll-snap-align: start;
+    }
+    .footer-nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .footer-nav li {
+      margin: 0 10px;
+    }
+    .footer-nav a {
+      color: #333;
+      text-decoration: none;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      color: #333;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Waste Management App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Waste Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Waste Collectors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="waste-image-1.jpg" class="d-block w-100" alt="Waste Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="waste-image-2.jpg" class="d-block w-100" alt="Waste Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="waste-image-3.jpg" class="d-block w-100" alt="Waste Image 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container my-5">
+    <h2>What Our Customers Say</h2>
+    <div class="reviewer-section">
+      <img src="reviewer-1.jpg" alt="Reviewer 1" class="reviewer-image">
+      <img src="reviewer-2.jpg" alt="Reviewer 2" class="reviewer-image">
+      <img src="reviewer-3.jpg" alt="Reviewer 3" class="reviewer-image">
+      <img src="reviewer-4.jpg" alt="Reviewer 4" class="reviewer-image">
+      <img src="reviewer-5.jpg" alt="Reviewer 5" class="reviewer-image">
+    </div>
+  </div>
+
+  <footer class="bg-light py-4">
+    <div class="container">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Waste Collection</a></li>
+          <li><a href="#">Waste Collectors</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="text-center mb-0">&copy; 2024 Waste Management App. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
