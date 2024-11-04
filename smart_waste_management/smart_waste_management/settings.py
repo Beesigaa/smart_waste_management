@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'smart_waste_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smart_waste_management_db',
-        'USER': 'alxswe',
-        'PASSWORD': 'alxswe',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3', #'smart_waste_management_db',
+        #'USER': 'alxswe',
+        #'PASSWORD': 'alxswe',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
         }
 }
 
