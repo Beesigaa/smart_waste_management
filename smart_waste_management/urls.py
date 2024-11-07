@@ -20,7 +20,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing_page, name='landing_page'),
-    path('users/', include('users.urls')),
-    path('waste_management/', include('waste_management.urls')),
-    path('analytics/', include('analytics.urls')),
+    path('analytics/', include('analytics.urls', namespace='analytics')),
+    path('users/', include('users.urls', namespace='users')),
+    path('waste_management/', include('waste_management.urls', namespace='waste_management')),
 ]

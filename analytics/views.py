@@ -1,3 +1,4 @@
+from django.db import models
 from django.shortcuts import render
 from waste_management.models import WasteBin, WasteDisposalRequest
 # Create your views here.
