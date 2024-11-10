@@ -6,6 +6,7 @@ class WasteBin(models.Model):
     location = models.CharField(max_length=100)
     capacity = models.IntegerField()  # max capacity of bin in liters
     current_level = models.IntegerField()  # current waste level in liters
+    is_full = models.BooleanField(default=False)
 
     def is_full(self):
         return self.current_level >= self.capacity
