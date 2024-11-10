@@ -13,9 +13,9 @@ class WasteBin(models.Model):
     def __str__(self):
         return f"{self.location} (Capacity: {self.capacity}L)"
 
-class WasteDisposalRequest(models.Model):
+class WasteRequest(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    bin = models.ForeignKey(WasteBin, on_delete=models.CASCADE, related_name="disposal_requests")
+    bin = models.ForeignKey(WasteBin, on_delete=models.CASCADE, related_name="requests")
     timestamp = models.DateTimeField(default=timezone.now)
     status = models.CharField(
         max_length=20,

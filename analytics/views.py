@@ -1,14 +1,9 @@
-from django.db import models
 from django.shortcuts import render
-from waste_management.models import WasteBin, WasteDisposalRequest
-# Create your views here.
+from django.db import models  # Add this import
+from waste_management.models import WasteBin
+
 def dashboard(request):
     bins = WasteBin.objects.all()
-    total_bins = bins.count()
     full_bins = bins.filter(current_level__gte=models.F('capacity')).count()
-    total_requests = WasteDisposalRequest.objects.count()
-    return render(request, 'analytics/dashboard.html', {
-        'total_bins': total_bins,
-        'full_bins': full_bins,
-        'total_requests': total_requests,
-    })
+    return render(request, 'analytics/dashboard.html', {'full_bins': full_bins})
+

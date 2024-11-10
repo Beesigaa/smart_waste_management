@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import WasteBin, WasteDisposalRequest
+from .models import WasteBin, WasteRequest
 
 # Create your views here.
 @login_required
@@ -10,5 +10,5 @@ def disposal_request(request, bin_id):
         # Alert that the bin is full
         return render(request, 'waste_management/bin_full.html', {'bin': bin})
     else:
-        WasteDisposalRequest.objects.create(user=request.user, bin=bin)
+        WasteRequest.objects.create(user=request.user, bin=bin)
         return redirect('dashboard')
